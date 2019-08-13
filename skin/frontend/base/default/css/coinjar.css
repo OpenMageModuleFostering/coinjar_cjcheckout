@@ -1,0 +1,84 @@
+/* CoinJar Notice */
+#coinjar-order-notice {
+    margin: 0;
+    border: 0;
+    background-color: #1F3852;
+    font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    color: #FAA628;
+}
+#coinjar-order-notice .logo {
+    width: 54px;
+    height: 41px;
+    margin-top: -1px;
+    margin-right: 20px;
+    background-image: url('../images/coinjar_logo.svg');
+}
+#coinjar-order-notice .notice-inner {
+    padding: 25px 0;
+    line-height: 1.15;
+    background: none;
+}
+#coinjar-order-notice .notice-inner p {
+    padding: 0;
+    border: 0;
+    line-height: 38px;
+}
+#coinjar-order-notice .notice-inner p a.btn:hover {
+    background: #A9D7F7;
+    border: 1px solid #7AC3F3;
+    color: #1F3852;
+}
+#coinjar-order-notice .notice-inner p a.btn {
+    border: 1px solid #7AC3F3;
+    background: none;
+    color: #7AC3F3;
+    padding: 9px 12px 10px;
+    line-height: 22px;
+    text-decoration: none;
+    text-shadow: none;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: 0.15s;
+    -moz-transition: 0.15s;
+    -o-transition: 0.15s;
+    transition: 0.15s;
+    -webkit-backface-visibility: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin: -2px 0 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    float: right;
+}
+
+@media only screen and (max-width: 767px) {
+    #coinjar-order-notice .logo {
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+        margin-right: 40px;
+    }
+    #coinjar-order-notice span.message {
+        display: block;
+        margin-top: 14px;
+    }
+    #coinjar-order-notice .notice-inner {
+        text-align: center;
+        width: auto;
+        padding: 22px 0 18px 0;
+    }
+    #coinjar-order-notice .notice-inner p {
+        line-height: 20px;
+    }
+    #coinjar-order-notice .notice-inner p a.btn {
+        float: none;
+    }
+}

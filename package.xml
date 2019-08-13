@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>CoinJar_CJCheckout</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/GPL-3.0">GNU General Public License (GPL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Accept Bitcoin on your Magento Store with CoinJar</summary>
+    <description>This plugin will allow you to integrate CoinJar checkout into your website. CoinJar Checkout allows you to accept bitcoin and receive the Australian dollar amount of the product to your bank account. Learn more about CoinJar For Business here - https://www.coinjar.com/business. </description>
+    <notes>First release</notes>
+    <authors><author><name>Mike Bywaters</name><user>mbywaters</user><email>mbywaters@internode.on.net</email></author></authors>
+    <date>2014-08-27</date>
+    <time>12:37:00</time>
+    <contents><target name="magecommunity"><dir name="CoinJar"><dir name="CJCheckout"><dir name="Block"><dir name="Standard"><file name="Form.php" hash="ab5474dcfabf4733adad44202a34b2cf"/></dir><file name=".DS_Store" hash="2bf4f1e140aa33dae2095a3e3aadf8f9"/></dir><dir name="Controller"><file name="Abstract.php" hash="be4e139e510d69c6ecfab21e11a85c5e"/><file name="Standard.php" hash="d9de025b1571ce1e964c6a61a0aee5d2"/></dir><dir name="Helper"><file name="Checkout.php" hash="fab8aef2aec1f4bad07a38453cfa7bbf"/><file name="Data.php" hash="d3b8793c420df2e620c1df6dcf3b1fb5"/></dir><dir name="Model"><file name="Abstract.php" hash="98ef9da9e194cc6492f019cfa7ddd0cc"/><file name="Api.php" hash="71794a054a5231e1fee57e6ffd6be26f"/><file name="Config.php" hash="641a37f18882b6309f3c8531a719ef77"/><file name="Ipn.php" hash="37c4d1b0c6a22c0e3e7d97534678455f"/><file name="Standard.php" hash="8f92c7c1c89b6691b8c9365ba1664a67"/><file name=".DS_Store" hash="194577a7e20bdcc7afbb718f502c134c"/></dir><dir name="controllers"><file name="StandardController.php" hash="c33bebab08572f28b2dbd07ceab31851"/></dir><dir name="etc"><file name="config.xml" hash="f6a1eb3e0675151051c612a48a8da92a"/><file name="system.xml" hash="a5a1846e932a7b7ac4d99fbba6ec7149"/><file name=".DS_Store" hash="194577a7e20bdcc7afbb718f502c134c"/></dir><file name=".DS_Store" hash="241729b9fbe086abddd0d2f6c2e4d616"/></dir><file name=".DS_Store" hash="9f39bc15796e1e92c73ac7c77064c629"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="coinjar.css" hash="3a22b515357c167a88b27ac3a5cc345f"/></dir><dir name="images"><file name="coinjar_logo.svg" hash="0a2a01bc3365755598f3e98a3004ee80"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="CoinJar_CJCheckout.xml" hash="6b2c5bbaefd6923e878794f7bf0e9a3c"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="coinjar.xml" hash="02360172288e8ca0ecdc3d7562c19240"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

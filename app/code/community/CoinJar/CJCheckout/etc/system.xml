@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payment_services>
+            <groups>
+                <coinjar translate="label" module="cjcheckout">
+                    <label>CoinJar</label>
+                    <sort_order>700</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <displaynotice translate="label">
+                            <label>Enable "Incomplete Order" Notice</label>
+                            <comment><![CDATA[Displays a sitewide notice and timer to any customer with an incomplete CoinJar Order. ]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </displaynotice>
+                        <ipn translate="label">
+                            <label>Enable IPN?</label>
+                            <comment><![CDATA[Set to 'Yes' to allow CoinJar to send payment confirmations to your server via IPN. ]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ipn>
+                        <debuglog translate="label">
+                            <label>Enable CoinJar Magento Logging</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </debuglog>
+                        <enableipndebug translate="label">
+                            <label>Enable IPN debug mode?</label>
+                            <comment><![CDATA[Removes hmac checks on IPN source and allows $_GET parameters on IPN controller. Used for testing/debugging. Always set to 'No' in production. ]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enableipndebug>
+                    </fields>
+                </coinjar>
+            </groups>
+        </payment_services>
+        <payment>
+            <groups>
+                <cjcheckout_standard translate="label" module="cjcheckout">
+                    <label>Bitcoin via CoinJar Checkout</label>
+                    <comment><![CDATA[Accept Bitcoins on your website via CoinJar Checkout. Get your account at <a href="https://coinjar.io">https://coinjar.io</a>.]]></comment>
+                    <sort_order>700</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+                        <sandbox translate="label">
+                            <label>Sandbox mode?</label>
+                            <comment><![CDATA[If set to 'Yes' will use CoinJar Checkout in sandbox mode. Please set to 'No' for production. ]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sandbox>
+                        <merchantuuid translate="label">
+                            <label>Merchant UUID</label>
+                            <comment><![CDATA[Your merchant UUID at CoinJar Checkout <a href="https://checkout.coinjar.io/merchant/credentials">https://checkout.coinjar.io/merchant/credentials</a>.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </merchantuuid>
+                        <merchantsecret translate="label">
+                            <label>Merchant Secret</label>
+                             <comment><![CDATA[Your merchant secret at CoinJar Checkout <a href="https://checkout.coinjar.io/merchant/credentials">https://checkout.coinjar.io/merchant/credentials</a>.]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </merchantsecret>
+                        <allowspecific translate="label">
+                            <label>Payment from Applicable Countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/cjcheckout_standard/allowspecific</config_path>
+                            <sort_order>6</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/cjcheckout_standard/specificcountry</config_path>
+                            <sort_order>7</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+                    </fields>
+                </cjcheckout_standard>
+            </groups>
+        </payment>
+    </sections>
+</config>

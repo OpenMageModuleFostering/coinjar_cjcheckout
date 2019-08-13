@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <CoinJar_CJCheckout>
+            <active>true</active>
+            <codePool>community</codePool>
+        </CoinJar_CJCheckout>
+    </modules>
+</config>
