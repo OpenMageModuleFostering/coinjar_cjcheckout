@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Accept Bitcoin on your Magento Store with CoinJar
