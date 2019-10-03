@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/CoinJar_CJCheckout",
+    "name": "OpenMageModuleFostering\/CoinJar_CJCheckout",
     "type": "magento-module",
     "license": "GNU-General-Public-License-(GPL)",
     "homepage": "",
     "description": "Accept Bitcoin on your Magento Store with CoinJar",
     "authors": [
-    {
-        "name": "Mike Bywaters",
-        "email": "mbywaters@internode.on.net"
-    }
-],
+        {
+            "name": "Mike Bywaters",
+            "email": "mbywaters@internode.on.net"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
